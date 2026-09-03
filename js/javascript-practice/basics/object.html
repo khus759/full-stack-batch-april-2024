@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            friend : function() {
+                console.log("My friend is Alice.");
+            }
+        };
+
+        person.name = "Jane"; // Update name
+        person.age = 25; // Update age
+        
+
+        for (let key in person) {
+            console.log(`${key}: ${person[key]}`);
+        }
+
+        // methods of object
+
+        // annnonymous function
+        person.greet = function() {
+            console.log(`Hello, my name is ${this.name}`);
+        };
+        person.greet(); // Call the method
+
+        // arrow function
+        person.introduce = () => {
+            console.log(`I am ${this.name} and I am ${this.age} years old.`);
+        };
+        person.introduce(); // Call the arrow function
+        
+        // normal function
+        function city() {
+            console.log(`I live in ${this.city}.`);
+        };
+        person.place = city;
+        person.place(); // Call the normal function
+
+        person.friend(); // Call the method
+
+       
+    </script>
+</body>
+</html>

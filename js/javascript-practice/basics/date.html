@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date time</title>
+</head>
+<body>
+    <script>
+        let currentDate = new Date(); // Current date and time
+        console.log(`Current Date and Time: ${currentDate}`);
+
+        //year, month, day, hours, minutes, seconds, milliseconds
+        let specificDate = new Date(2023, 9, 5, 12, 30, 0); // October is month 9 (0-indexed)
+        console.log(`Specific Date: ${specificDate}`);
+
+        //find the day after 50 day
+        let futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 50);
+        console.log(`Date after 50 days: ${futureDate}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Create a Student class with instance variables name, grade, and subjects. Write methods to add a subject and display the student's information.

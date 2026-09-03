@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form in javascript</title>
+    <style>
+        
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+        .form-container {
+            width: 300px;
+            margin: 15% auto;
+            padding: 60px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #5b98d8;
+       
+        }
+        #submit-id{
+            display: block;
+            text-align: center;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 107%;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin: 0px;
+            text-align: left;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="form-container">
+            <h2>login website</h2>
+            <form action="" onsubmit="return validate_form()">
+                <input type="text" placeholder="Enter your name" id="name-id">
+                <p class="error" id="userError">Error</p>
+                <input type="password" placeholder="Enter your password" id="pass-id">
+                <p class="error" id="passError">Error</p>
+                <input type="submit" placeholder="submit" id="submit-id">
+            </form>
+        </div>
+    </div>
+    <script>
+        let userName = document.getElementById("name-id");
+        let userPassword = document.getElementById("pass-id");
+        let userSubmit = document.getElementById("submit-id");
+
+        function validate_form() {
+            if (userName.value == "") {
+                console.log("Please enter your name");
+            }
+            return false;
+        }
+
+    </script>
+</body>
+</html>

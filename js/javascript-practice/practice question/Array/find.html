@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find-task</title>
+</head>
+<body>
+    <h1>Find-task</h1>
+</body>
+<script>
+    //Find the first number greater than 10
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const greaterThanTen = numbers.find((number)=> {
+        return number > 10;
+    })
+    console.log(greaterThanTen);
+
+    //Find the first user with a verified email
+    const users = [
+        {name : 'alia',
+       isvarifies:true},
+        {name : 'neeti',
+       isvarifies:false},
+        {name : 'preet',
+       isvarifies:false},
+        {name : 'raha',
+       isvarifies:false}
+       ]
+
+    const usersVarified = users.find((varified)=>{
+        return varified.isvarifies === true;
+    })
+    console.log(usersVarified);
+</script>
+</html>

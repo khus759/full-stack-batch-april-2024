@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            friend : function() {
+                console.log("My friend is Alice. she has "+car.brand+" "+car.model);
+                console.log(`Hello, my name is ${this.name} i have ${car.year} ${car.brand} ${car.model}`);
+            }
+        };
+
+        let car = {
+            brand: "Toyota",
+            model: "Camry",
+            year: 2020,
+            start: function() {
+                console.log("Car started");
+            }
+        };
+        person.friend();
+        car.start();
+
+        // new keyword
+        
+        function Animal(name, type) { //this is a object constructer come in the es6 first alphabet is capital (oops)
+            this.name = name;
+            this.type = type;
+            // this.introduce = function() {
+            //     console.log(`I am a ${this.type} named ${this.name}`);
+            // };
+        }
+        let animal = new Animal("dog", "dog");
+        let cat = new Animal ("cat", "cat");
+        console.log(animal.name);
+        console.log(cat.type);
+        // animal.introduce();
+
+        function Student (firstName,lastName, age, cls) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.cls = cls;
+        }
+        let student1 = new Student("John", "Doe", 20, "10th");
+        student1.nation = "India"; // adding new property to the object
+        student1.introduce = function() { // adding new method to the object
+            return(`I am ${this.firstName} ${this.lastName}, age ${this.age}, studying in class ${this.cls}.`);
+        };
+        let student2 = new Student("Jane", "Smith", 22, "12th");
+        console.log(student1);
+        console.log(student1.introduce());
+        
+
+        let dog = {
+            name : "python",
+            type : "dog",
+            introduce : function() {
+                console.log(`I am a ${this.type} named ${this.name}`);
+            }
+        }
+        dog.introduce();
+
+       // Define the constructor
+function www() {
+    this.color = "";
+    this.length = "";
+}
+
+let hair = new www();
+
+// Set properties
+hair.color = "black";
+hair.length = "short";
+
+// Optional method
+// hair.describe = function() {
+//     console.log(`My hair is ${this.color} and ${this.length}`);
+// };
+
+// Use the properties
+let wow = hair.color;   // "black"
+let nice = hair.length; // "short"
+
+console.log(wow);  // Output: black
+console.log(nice); // Output: short
+
+let person1 = {
+    name: "Alice",
+    age: 25,
+    greet: function() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        return this.name.toUpperCase() + " " + this.age;
+    }
+};
+console.log(person1.greet()); 
+
+// setter and getter
+let person2 = {
+    firstName: "John",
+    lastName: "Doe",
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    set fullName(name) {
+        const parts = name.split(" ");
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+console.log(person2.fullName); //  in this get set work as property instead function()
+
+// object constructer prototype
+ function Student3 (firstName,lastName, age, cls) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.cls = cls;
+        }
+        Student3.prototype.introduce = "American";
+        let student4 = new Student3("muskan", "singh", 20, "10th");
+        let student5 = new Student3("anjali", "khan", 20, "10th");
+        console.log(student4);
+        console.log(student5);
+
+
+    </script>
+</body>
+</html>

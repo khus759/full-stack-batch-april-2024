@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // DOM (Document Object Model) and BOM (Browser Object Model)
+    // DOM is a representation of the HTML document as a tree structure
+    // BOM is a representation of the browser window and its components
+
+    // Accessing the DOM
+    console.log(document); // The entire document object
+    console.log(document.body); // The body element of the document
+    console.log(document.title); // The title of the document
+
+    // Manipulating the DOM
+    document.title = "New Title"; // Changing the title of the document
+    const newElement = document.createElement("p"); // Creating a new paragraph element
+    newElement.textContent = "Hello, World!"; // Setting text content for the new element
+    document.body.appendChild(newElement); // Appending the new element to the body
+
+    // Accessing BOM properties
+    console.log(window.innerWidth); // Width of the browser window
+    console.log(window.innerHeight); // Height of the browser window
+    </script>
+</html>

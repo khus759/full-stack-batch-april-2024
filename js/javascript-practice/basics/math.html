@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math object</title>
+</head>
+<body>
+    <script>
+        // let x = Math.round(4.7);  //rounded limit
+        let p = Math.round()*2;  //rounded limit
+        let h = Math.floor(Math.round()*10);  //it give number between 0 and 9 cause of floor not 10 
+        let d = Math.floor(Math.round()*10)+2;  //it give number between 0 and 9 cause of floor not 10 will add 2 
+        let y = Math.floor(4.7); //lower limit
+        let z = Math.ceil(4.7);  //upper limit
+        let i = Math.trunc(4.7);  //truncated value means remove point
+        let k = Math.pow(4,7);  //returns the base to the exponent power shuld be two arguments
+        let j = Math.sqrt(4); //returns the square root of a number
+        let l = Math.abs(-4.7); //returns the absolute value of a number
+        let m = Math.max(4, 7, 2, 9); //returns the largest of the given numbers
+        let n = Math.max(4, 7, 2, 9); //returns the smallest of the given numbers
+        console.log(`${x} value of 4.7 is: ${x}`);
+
+        //generate number between 20 to 25
+        let randomNumber = Math.floor(Math.random() * (25 - 20 + 1)) + 20;
+        console.log(`Random number between 20 and 25: ${randomNumber}`);
+
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(`Random number between 10 and 20: ${generateRandomNumber(10, 20)}`);
+        console.log(`Random number between 1 and 100: ${generateRandomNumber(1, 100)}`);
+    </script>
+</body>
+</html>

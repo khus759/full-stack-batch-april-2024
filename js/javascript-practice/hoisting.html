@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>hoisting</h2>
+    </main>
+    <script>
+        // it only pull declaration not initialization
+        // hoisting is a JavaScript mechanism where variables and function declarations are moved to the top
+        // of their containing scope during the compile phase, before the code is executed.
+        console.log(myVar); // undefined
+        var myVar = 10; // variable declaration is hoisted, but initialization is not
+        // output: undefined
+
+
+
+
+
+        x=4;
+        console.log(x); // 4
+        // var be default if we don't declare variable it will be declared in global scope
+        // this is not a good practice to use variable without declaration
+        // to avoid this we can use "use strict" at the top of the file
+    </script>
+</body>
+</html>

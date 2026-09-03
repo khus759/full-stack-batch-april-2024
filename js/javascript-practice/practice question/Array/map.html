@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map-tasks</title>
+</head>
+<body>
+    <h1>Map-tasks</h1>
+</body>
+<script>
+    //Double all numbers in an array.
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+    const doubleNumbers = numbers.map((double)=> {
+        return double * 2;
+    })
+    console.log(doubleNumbers);
+
+    //Convert an array of strings to uppercase
+    const strings = ['hello','world','india','java'];
+    const upperCaseStrings = strings.map(function(upper){
+        return upper.toUpperCase();
+    })
+    console.log(upperCaseStrings);
+
+    //Extract only names from an array of user objects.
+    const users =[
+        {name:'sweety' , work:'developer'},
+        {name:'sweta'},
+        {name:'sanjna'},
+        {name:'shiva'}
+    ]
+    const userName = users.map((name)=>{
+        return name.name;
+    })
+    console.log(userName);
+
+    //Add 10 to every age in an array of user objects.
+    const usersWithAge = [
+        {name:'sita', age:20},
+        {name:'smeer', age:22},
+        {name:'khushi', age:23},
+        {name:'shashi', age:24}
+    ]
+    const updateAge = usersWithAge.map((userAge)=>{
+        return userAge.age + 10;
+    })
+    console.log(updateAge);
+
+</script>
+</html>
