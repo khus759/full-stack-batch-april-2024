@@ -1,0 +1,7 @@
+f=open("sample.txt","r")
+data=f.read()
+print(data)
+data1=f.readline()
+print(data1)
+data2=f.readline()
+print(data2)
